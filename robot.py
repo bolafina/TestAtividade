@@ -23,7 +23,7 @@ class MyRobot(wpilib.TimedRobot):
 
 
     def teleopPeriodic(self):
-        self.drivetrain.arcadeDrive(-self.joystick.getRawAxis(1), self.joystick.getRawAxis(0))
+        self.drivetrain.arcadeDrive(-self.joystick.getRawAxis(1), self.joystick.getRawAxis(0), True)
 
         if self.joystick.getRawButton(1):
             self.motor_elevacao.set(1.0)
